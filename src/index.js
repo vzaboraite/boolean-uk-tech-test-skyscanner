@@ -11,3 +11,10 @@ ReactDOM.render(React.createElement(App), document.getElementById('root'));
  * TODO - retrieve the results from the provided flight.json
  * TODO - a better format for displaying results to the results page.
  */
+
+/*
+1. fetch data from `http://localhost:3000/flights.json in App.jsx(parent component)
+2. store in state
+3. render retrieved data
+
+*/
