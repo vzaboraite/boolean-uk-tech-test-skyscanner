@@ -8,21 +8,29 @@ import STYLES from './App.scss';
 const getClassName = (className) => STYLES[className] || 'UNKNOWN';
 
 const App = () => {
-  console.log('Inside App.jsx');
-  const [itineraries, setItineraries] = useState([]);
-  const [legs, setLegs] = useState([]);
+  const [flights, setFlights] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3000/flights.json')
       .then((res) => res.json())
       .then((data) => {
-        setItineraries(data.itineraries);
-        setLegs(data.legs);
+        const itineraries = data.itineraries;
+        const legs = data.legs;
+
+        const flightsData = itineraries.map((itinerary) => {
+          const updatedLegs = itinerary.legs.map((leg) =>
+            legs.find((legItem) => legItem.id === leg)
+          );
+          const updatedItinerary = {
+            ...itinerary,
+            legs: updatedLegs,
+          };
+          return updatedItinerary;
+        });
+
+        setFlights(flightsData);
       });
   }, []);
-
-  console.log({ itineraries });
-  console.log({ legs });
 
   return (
     <div className={getClassName('App')}>
