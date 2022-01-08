@@ -15,6 +15,10 @@ ReactDOM.render(React.createElement(App), document.getElementById('root'));
 /*
 1. fetch data from `http://localhost:3000/flights.json in App.jsx(parent component)
 2. store in state
-3. render retrieved data
-
+3. render retrieved data:
+    3.1 create components to render the flights data:
+    - FlightsList.jsx
+    - FlightsListItem.jsx
+4. styles:
+    - small-screen size 480px portrait orientation
 */
