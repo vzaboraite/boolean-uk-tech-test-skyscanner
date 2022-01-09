@@ -91,9 +91,12 @@ const FlightsListItem = ({ flight }) => {
         })}
       </div>
 
-      <div className={getClassName('FlightsListItem__agent_price')}>
-        <div>{price}</div>
-        <div>{agent.toLowerCase()}</div>
+      <div className={getClassName('FlightsListItem__agent_select__grid')}>
+        <div className={getClassName('FlightsListItem__agent_price')}>
+          <div>{price}</div>
+          <div>{agent.toLowerCase()}</div>
+        </div>
+        <button>Select</button>
       </div>
     </li>
   );
