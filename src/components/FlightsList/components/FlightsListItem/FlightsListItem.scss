@@ -1,4 +1,37 @@
 @import '~bpk-mixins';
 
 .FlightsListItem {
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin: 20px 0;
+
+  &__legs {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__trip {
+      &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 5px;
+      }
+    }
+
+    &__airline-image {
+      height: $bpk-spacing-base;
+      vertical-align: top;
+    }
+
+    &__departure,
+    &__arrival {
+      &__time {
+        font-family: serif;
+      }
+      &__airport {
+        color: gray;
+      }
+    }
+  }
 }
