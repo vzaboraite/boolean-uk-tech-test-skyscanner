@@ -1,5 +1,14 @@
 @import '~bpk-mixins';
 
 .FlightsList {
+  padding: 0;
+  margin: auto;
+
   list-style-type: none;
+
+  max-width: 700px;
+
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    width: 420px;
+  }
 }
