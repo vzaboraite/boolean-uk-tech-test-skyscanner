@@ -1,6 +1,12 @@
 @import '~bpk-mixins';
+@import '~bpk-stylesheets/font';
 
 .App {
+  background-color: rgb(241, 242, 248);
+  font-family: 'Skyscanner Relative', -apple-system, BlinkMacSystemFont,
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+
   &__main {
     padding: $bpk-spacing-sm;
   }
